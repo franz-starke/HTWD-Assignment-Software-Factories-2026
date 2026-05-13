@@ -1,0 +1,9 @@
+grammar de.htwdd.sf.beleg.s86320.s86372.Beleg with org.eclipse.xtext.common.Terminals
+
+generate beleg "http://www.htwdd.de/sf/beleg/s86320/s86372/Beleg"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
