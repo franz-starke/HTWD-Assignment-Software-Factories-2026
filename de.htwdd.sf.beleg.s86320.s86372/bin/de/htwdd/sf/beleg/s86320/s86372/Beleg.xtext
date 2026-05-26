@@ -2,8 +2,26 @@ grammar de.htwdd.sf.beleg.s86320.s86372.Beleg with org.eclipse.xtext.common.Term
 
 generate beleg "http://www.htwdd.de/sf/beleg/s86320/s86372/Beleg"
 
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+//Model:
+//    story+=S*
+//;
+
+//Story:
+//	title+=ID (title+=ID)*
+//	':' 'Um'
+//	use+=ID (use+=ID)*
+//	','	'möchte' 'ich' 'als'
+//	role=ID
+//	goal+=ID (goal+=ID)*
+//	'.'
+//;
+
+S: xe=XPart ye=YPart ze=ZPart '.';
+XPart: ti=Title ':' 'Um';
+Title: Titel+=ID (Titel+=ID)*;
+YPart: us=Use ',' 'möchte' 'ich' 'als';
+Use: Nutzen+=ID (Nutzen+=ID)* ;
+ZPart: Rolle=ID go=Goal;
+Goal: Ziel+=ID (Ziel+=ID)*;
+
+
