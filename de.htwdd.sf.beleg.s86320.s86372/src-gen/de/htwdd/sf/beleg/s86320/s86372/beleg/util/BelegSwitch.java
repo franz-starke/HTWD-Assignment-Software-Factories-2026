@@ -80,59 +80,59 @@ public class BelegSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BelegPackage.STORY:
+      case BelegPackage.USER_STORY_UM:
       {
-        Story story = (Story)theEObject;
-        T result = caseStory(story);
+        User_Story_Um user_Story_Um = (User_Story_Um)theEObject;
+        T result = caseUser_Story_Um(user_Story_Um);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BelegPackage.S:
+      case BelegPackage.TITEL:
       {
-        S s = (S)theEObject;
-        T result = caseS(s);
+        Titel titel = (Titel)theEObject;
+        T result = caseTitel(titel);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BelegPackage.XPART:
+      case BelegPackage.TEXT:
       {
-        XPart xPart = (XPart)theEObject;
-        T result = caseXPart(xPart);
+        Text text = (Text)theEObject;
+        T result = caseText(text);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BelegPackage.TITLE:
+      case BelegPackage.NUTZEN:
       {
-        Title title = (Title)theEObject;
-        T result = caseTitle(title);
+        Nutzen nutzen = (Nutzen)theEObject;
+        T result = caseNutzen(nutzen);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BelegPackage.YPART:
+      case BelegPackage.ROLLE:
       {
-        YPart yPart = (YPart)theEObject;
-        T result = caseYPart(yPart);
+        Rolle rolle = (Rolle)theEObject;
+        T result = caseRolle(rolle);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BelegPackage.USE:
+      case BelegPackage.ZIEL:
       {
-        Use use = (Use)theEObject;
-        T result = caseUse(use);
+        Ziel ziel = (Ziel)theEObject;
+        T result = caseZiel(ziel);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BelegPackage.ZPART:
+      case BelegPackage.SUBSTANTIV:
       {
-        ZPart zPart = (ZPart)theEObject;
-        T result = caseZPart(zPart);
+        Substantiv substantiv = (Substantiv)theEObject;
+        T result = caseSubstantiv(substantiv);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BelegPackage.GOAL:
+      case BelegPackage.INFINIT:
       {
-        Goal goal = (Goal)theEObject;
-        T result = caseGoal(goal);
+        Infinit infinit = (Infinit)theEObject;
+        T result = caseInfinit(infinit);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -157,129 +157,129 @@ public class BelegSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Story</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>User Story Um</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Story</em>'.
+   * @return the result of interpreting the object as an instance of '<em>User Story Um</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStory(Story object)
+  public T caseUser_Story_Um(User_Story_Um object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>S</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Titel</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>S</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Titel</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseS(S object)
+  public T caseTitel(Titel object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>XPart</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Text</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>XPart</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Text</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseXPart(XPart object)
+  public T caseText(Text object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Title</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Nutzen</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Title</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Nutzen</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTitle(Title object)
+  public T caseNutzen(Nutzen object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>YPart</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Rolle</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>YPart</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Rolle</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseYPart(YPart object)
+  public T caseRolle(Rolle object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Use</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Ziel</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Use</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Ziel</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseUse(Use object)
+  public T caseZiel(Ziel object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>ZPart</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Substantiv</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>ZPart</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Substantiv</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseZPart(ZPart object)
+  public T caseSubstantiv(Substantiv object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Goal</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Infinit</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Goal</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Infinit</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseGoal(Goal object)
+  public T caseInfinit(Infinit object)
   {
     return null;
   }

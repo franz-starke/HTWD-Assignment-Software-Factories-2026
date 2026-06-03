@@ -33,76 +33,76 @@ public interface BelegFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>Story</em>'.
+   * Returns a new object of class '<em>User Story Um</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Story</em>'.
+   * @return a new object of class '<em>User Story Um</em>'.
    * @generated
    */
-  Story createStory();
+  User_Story_Um createUser_Story_Um();
 
   /**
-   * Returns a new object of class '<em>S</em>'.
+   * Returns a new object of class '<em>Titel</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>S</em>'.
+   * @return a new object of class '<em>Titel</em>'.
    * @generated
    */
-  S createS();
+  Titel createTitel();
 
   /**
-   * Returns a new object of class '<em>XPart</em>'.
+   * Returns a new object of class '<em>Text</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>XPart</em>'.
+   * @return a new object of class '<em>Text</em>'.
    * @generated
    */
-  XPart createXPart();
+  Text createText();
 
   /**
-   * Returns a new object of class '<em>Title</em>'.
+   * Returns a new object of class '<em>Nutzen</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Title</em>'.
+   * @return a new object of class '<em>Nutzen</em>'.
    * @generated
    */
-  Title createTitle();
+  Nutzen createNutzen();
 
   /**
-   * Returns a new object of class '<em>YPart</em>'.
+   * Returns a new object of class '<em>Rolle</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>YPart</em>'.
+   * @return a new object of class '<em>Rolle</em>'.
    * @generated
    */
-  YPart createYPart();
+  Rolle createRolle();
 
   /**
-   * Returns a new object of class '<em>Use</em>'.
+   * Returns a new object of class '<em>Ziel</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Use</em>'.
+   * @return a new object of class '<em>Ziel</em>'.
    * @generated
    */
-  Use createUse();
+  Ziel createZiel();
 
   /**
-   * Returns a new object of class '<em>ZPart</em>'.
+   * Returns a new object of class '<em>Substantiv</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>ZPart</em>'.
+   * @return a new object of class '<em>Substantiv</em>'.
    * @generated
    */
-  ZPart createZPart();
+  Substantiv createSubstantiv();
 
   /**
-   * Returns a new object of class '<em>Goal</em>'.
+   * Returns a new object of class '<em>Infinit</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Goal</em>'.
+   * @return a new object of class '<em>Infinit</em>'.
    * @generated
    */
-  Goal createGoal();
+  Infinit createInfinit();
 
   /**
    * Returns the package supported by this factory.

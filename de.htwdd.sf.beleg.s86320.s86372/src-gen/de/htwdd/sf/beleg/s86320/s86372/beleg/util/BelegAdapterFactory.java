@@ -81,44 +81,44 @@ public class BelegAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter caseStory(Story object)
+      public Adapter caseUser_Story_Um(User_Story_Um object)
       {
-        return createStoryAdapter();
+        return createUser_Story_UmAdapter();
       }
       @Override
-      public Adapter caseS(S object)
+      public Adapter caseTitel(Titel object)
       {
-        return createSAdapter();
+        return createTitelAdapter();
       }
       @Override
-      public Adapter caseXPart(XPart object)
+      public Adapter caseText(Text object)
       {
-        return createXPartAdapter();
+        return createTextAdapter();
       }
       @Override
-      public Adapter caseTitle(Title object)
+      public Adapter caseNutzen(Nutzen object)
       {
-        return createTitleAdapter();
+        return createNutzenAdapter();
       }
       @Override
-      public Adapter caseYPart(YPart object)
+      public Adapter caseRolle(Rolle object)
       {
-        return createYPartAdapter();
+        return createRolleAdapter();
       }
       @Override
-      public Adapter caseUse(Use object)
+      public Adapter caseZiel(Ziel object)
       {
-        return createUseAdapter();
+        return createZielAdapter();
       }
       @Override
-      public Adapter caseZPart(ZPart object)
+      public Adapter caseSubstantiv(Substantiv object)
       {
-        return createZPartAdapter();
+        return createSubstantivAdapter();
       }
       @Override
-      public Adapter caseGoal(Goal object)
+      public Adapter caseInfinit(Infinit object)
       {
-        return createGoalAdapter();
+        return createInfinitAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -158,121 +158,121 @@ public class BelegAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Story <em>Story</em>}'.
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um <em>User Story Um</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Story
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um
    * @generated
    */
-  public Adapter createStoryAdapter()
+  public Adapter createUser_Story_UmAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.S <em>S</em>}'.
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Titel <em>Titel</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.S
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Titel
    * @generated
    */
-  public Adapter createSAdapter()
+  public Adapter createTitelAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.XPart <em>XPart</em>}'.
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Text <em>Text</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.XPart
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Text
    * @generated
    */
-  public Adapter createXPartAdapter()
+  public Adapter createTextAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Title <em>Title</em>}'.
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Nutzen <em>Nutzen</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Title
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Nutzen
    * @generated
    */
-  public Adapter createTitleAdapter()
+  public Adapter createNutzenAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.YPart <em>YPart</em>}'.
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Rolle <em>Rolle</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.YPart
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Rolle
    * @generated
    */
-  public Adapter createYPartAdapter()
+  public Adapter createRolleAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Use <em>Use</em>}'.
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Ziel <em>Ziel</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Use
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Ziel
    * @generated
    */
-  public Adapter createUseAdapter()
+  public Adapter createZielAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.ZPart <em>ZPart</em>}'.
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Substantiv <em>Substantiv</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.ZPart
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Substantiv
    * @generated
    */
-  public Adapter createZPartAdapter()
+  public Adapter createSubstantivAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Goal <em>Goal</em>}'.
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Infinit <em>Infinit</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Goal
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Infinit
    * @generated
    */
-  public Adapter createGoalAdapter()
+  public Adapter createInfinitAdapter()
   {
     return null;
   }

@@ -5,15 +5,15 @@ package de.htwdd.sf.beleg.s86320.s86372.serializer;
 
 import com.google.inject.Inject;
 import de.htwdd.sf.beleg.s86320.s86372.beleg.BelegPackage;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.Goal;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Infinit;
 import de.htwdd.sf.beleg.s86320.s86372.beleg.Model;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.S;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.Story;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.Title;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.Use;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.XPart;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.YPart;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.ZPart;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Nutzen;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Rolle;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Substantiv;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Text;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Titel;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Ziel;
 import de.htwdd.sf.beleg.s86320.s86372.services.BelegGrammarAccess;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -40,32 +40,32 @@ public class BelegSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == BelegPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case BelegPackage.GOAL:
-				sequence_Goal(context, (Goal) semanticObject); 
+			case BelegPackage.INFINIT:
+				sequence_Infinit(context, (Infinit) semanticObject); 
 				return; 
 			case BelegPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
 				return; 
-			case BelegPackage.S:
-				sequence_S(context, (S) semanticObject); 
+			case BelegPackage.NUTZEN:
+				sequence_Nutzen(context, (Nutzen) semanticObject); 
 				return; 
-			case BelegPackage.STORY:
-				sequence_Story(context, (Story) semanticObject); 
+			case BelegPackage.ROLLE:
+				sequence_Rolle(context, (Rolle) semanticObject); 
 				return; 
-			case BelegPackage.TITLE:
-				sequence_Title(context, (Title) semanticObject); 
+			case BelegPackage.SUBSTANTIV:
+				sequence_Substantiv(context, (Substantiv) semanticObject); 
 				return; 
-			case BelegPackage.USE:
-				sequence_Use(context, (Use) semanticObject); 
+			case BelegPackage.TEXT:
+				sequence_Text(context, (Text) semanticObject); 
 				return; 
-			case BelegPackage.XPART:
-				sequence_XPart(context, (XPart) semanticObject); 
+			case BelegPackage.TITEL:
+				sequence_Titel(context, (Titel) semanticObject); 
 				return; 
-			case BelegPackage.YPART:
-				sequence_YPart(context, (YPart) semanticObject); 
+			case BelegPackage.USER_STORY_UM:
+				sequence_User_Story_Um(context, (User_Story_Um) semanticObject); 
 				return; 
-			case BelegPackage.ZPART:
-				sequence_ZPart(context, (ZPart) semanticObject); 
+			case BelegPackage.ZIEL:
+				sequence_Ziel(context, (Ziel) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -75,14 +75,20 @@ public class BelegSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Goal returns Goal
+	 *     Infinit returns Infinit
 	 *
 	 * Constraint:
-	 *     (Ziel+=ID Ziel+=ID*)
+	 *     value=WORT
 	 * </pre>
 	 */
-	protected void sequence_Goal(ISerializationContext context, Goal semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_Infinit(ISerializationContext context, Infinit semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.INFINIT__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.INFINIT__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getInfinitAccess().getValueWORTTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	
@@ -92,7 +98,7 @@ public class BelegSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     story+=S+
+	 *     story+=User_Story_Um+
 	 * </pre>
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
@@ -103,47 +109,13 @@ public class BelegSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     S returns S
+	 *     Nutzen returns Nutzen
 	 *
 	 * Constraint:
-	 *     (xe=XPart ye=YPart ze=ZPart)
+	 *     (subst=Substantiv zuBlock=ZuBlock? infinit+=Infinit+)
 	 * </pre>
 	 */
-	protected void sequence_S(ISerializationContext context, S semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.S__XE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.S__XE));
-			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.S__YE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.S__YE));
-			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.S__ZE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.S__ZE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSAccess().getXeXPartParserRuleCall_0_0(), semanticObject.getXe());
-		feeder.accept(grammarAccess.getSAccess().getYeYPartParserRuleCall_1_0(), semanticObject.getYe());
-		feeder.accept(grammarAccess.getSAccess().getZeZPartParserRuleCall_2_0(), semanticObject.getZe());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Story returns Story
-	 *
-	 * Constraint:
-	 *     (
-	 *         title+=ID 
-	 *         title+=ID* 
-	 *         use+=ID 
-	 *         use+=ID* 
-	 *         role=ID 
-	 *         goal+=ID 
-	 *         goal+=ID*
-	 *     )
-	 * </pre>
-	 */
-	protected void sequence_Story(ISerializationContext context, Story semanticObject) {
+	protected void sequence_Nutzen(ISerializationContext context, Nutzen semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -151,13 +123,73 @@ public class BelegSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Title returns Title
+	 *     Rolle returns Rolle
 	 *
 	 * Constraint:
-	 *     (Titel+=ID Titel+=ID*)
+	 *     subst=Substantiv
 	 * </pre>
 	 */
-	protected void sequence_Title(ISerializationContext context, Title semanticObject) {
+	protected void sequence_Rolle(ISerializationContext context, Rolle semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.ROLLE__SUBST) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.ROLLE__SUBST));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRolleAccess().getSubstSubstantivParserRuleCall_0(), semanticObject.getSubst());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Substantiv returns Substantiv
+	 *
+	 * Constraint:
+	 *     value=WORT
+	 * </pre>
+	 */
+	protected void sequence_Substantiv(ISerializationContext context, Substantiv semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.SUBSTANTIV__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.SUBSTANTIV__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSubstantivAccess().getValueWORTTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Text returns Text
+	 *
+	 * Constraint:
+	 *     value=WORT
+	 * </pre>
+	 */
+	protected void sequence_Text(ISerializationContext context, Text semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.TEXT__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.TEXT__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTextAccess().getValueWORTTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Titel returns Titel
+	 *
+	 * Constraint:
+	 *     textpart+=Text+
+	 * </pre>
+	 */
+	protected void sequence_Titel(ISerializationContext context, Titel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -165,77 +197,43 @@ public class BelegSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Use returns Use
+	 *     User_Story_Um returns User_Story_Um
 	 *
 	 * Constraint:
-	 *     (Nutzen+=ID Nutzen+=ID*)
+	 *     (title=Titel use=Nutzen role=Rolle goal=Ziel)
 	 * </pre>
 	 */
-	protected void sequence_Use(ISerializationContext context, Use semanticObject) {
+	protected void sequence_User_Story_Um(ISerializationContext context, User_Story_Um semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.USER_STORY_UM__TITLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.USER_STORY_UM__TITLE));
+			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.USER_STORY_UM__USE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.USER_STORY_UM__USE));
+			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.USER_STORY_UM__ROLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.USER_STORY_UM__ROLE));
+			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.USER_STORY_UM__GOAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.USER_STORY_UM__GOAL));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getUser_Story_UmAccess().getTitleTitelParserRuleCall_0_0(), semanticObject.getTitle());
+		feeder.accept(grammarAccess.getUser_Story_UmAccess().getUseNutzenParserRuleCall_3_0(), semanticObject.getUse());
+		feeder.accept(grammarAccess.getUser_Story_UmAccess().getRoleRolleParserRuleCall_8_0(), semanticObject.getRole());
+		feeder.accept(grammarAccess.getUser_Story_UmAccess().getGoalZielParserRuleCall_9_0(), semanticObject.getGoal());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Ziel returns Ziel
+	 *
+	 * Constraint:
+	 *     (subst=Substantiv infinit+=Infinit+)
+	 * </pre>
+	 */
+	protected void sequence_Ziel(ISerializationContext context, Ziel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     XPart returns XPart
-	 *
-	 * Constraint:
-	 *     ti=Title
-	 * </pre>
-	 */
-	protected void sequence_XPart(ISerializationContext context, XPart semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.XPART__TI) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.XPART__TI));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getXPartAccess().getTiTitleParserRuleCall_0_0(), semanticObject.getTi());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     YPart returns YPart
-	 *
-	 * Constraint:
-	 *     us=Use
-	 * </pre>
-	 */
-	protected void sequence_YPart(ISerializationContext context, YPart semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.YPART__US) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.YPART__US));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getYPartAccess().getUsUseParserRuleCall_0_0(), semanticObject.getUs());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     ZPart returns ZPart
-	 *
-	 * Constraint:
-	 *     (Rolle=ID go=Goal)
-	 * </pre>
-	 */
-	protected void sequence_ZPart(ISerializationContext context, ZPart semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.ZPART__ROLLE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.ZPART__ROLLE));
-			if (transientValues.isValueTransient(semanticObject, BelegPackage.Literals.ZPART__GO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BelegPackage.Literals.ZPART__GO));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getZPartAccess().getRolleIDTerminalRuleCall_0_0(), semanticObject.getRolle());
-		feeder.accept(grammarAccess.getZPartAccess().getGoGoalParserRuleCall_1_0(), semanticObject.getGo());
-		feeder.finish();
 	}
 	
 	

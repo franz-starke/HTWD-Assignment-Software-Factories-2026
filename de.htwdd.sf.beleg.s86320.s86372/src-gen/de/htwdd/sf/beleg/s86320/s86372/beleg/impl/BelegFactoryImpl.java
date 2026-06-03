@@ -66,14 +66,14 @@ public class BelegFactoryImpl extends EFactoryImpl implements BelegFactory
     switch (eClass.getClassifierID())
     {
       case BelegPackage.MODEL: return createModel();
-      case BelegPackage.STORY: return createStory();
-      case BelegPackage.S: return createS();
-      case BelegPackage.XPART: return createXPart();
-      case BelegPackage.TITLE: return createTitle();
-      case BelegPackage.YPART: return createYPart();
-      case BelegPackage.USE: return createUse();
-      case BelegPackage.ZPART: return createZPart();
-      case BelegPackage.GOAL: return createGoal();
+      case BelegPackage.USER_STORY_UM: return createUser_Story_Um();
+      case BelegPackage.TITEL: return createTitel();
+      case BelegPackage.TEXT: return createText();
+      case BelegPackage.NUTZEN: return createNutzen();
+      case BelegPackage.ROLLE: return createRolle();
+      case BelegPackage.ZIEL: return createZiel();
+      case BelegPackage.SUBSTANTIV: return createSubstantiv();
+      case BelegPackage.INFINIT: return createInfinit();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -97,10 +97,10 @@ public class BelegFactoryImpl extends EFactoryImpl implements BelegFactory
    * @generated
    */
   @Override
-  public Story createStory()
+  public User_Story_Um createUser_Story_Um()
   {
-    StoryImpl story = new StoryImpl();
-    return story;
+    User_Story_UmImpl user_Story_Um = new User_Story_UmImpl();
+    return user_Story_Um;
   }
 
   /**
@@ -109,10 +109,10 @@ public class BelegFactoryImpl extends EFactoryImpl implements BelegFactory
    * @generated
    */
   @Override
-  public S createS()
+  public Titel createTitel()
   {
-    SImpl s = new SImpl();
-    return s;
+    TitelImpl titel = new TitelImpl();
+    return titel;
   }
 
   /**
@@ -121,10 +121,10 @@ public class BelegFactoryImpl extends EFactoryImpl implements BelegFactory
    * @generated
    */
   @Override
-  public XPart createXPart()
+  public Text createText()
   {
-    XPartImpl xPart = new XPartImpl();
-    return xPart;
+    TextImpl text = new TextImpl();
+    return text;
   }
 
   /**
@@ -133,10 +133,10 @@ public class BelegFactoryImpl extends EFactoryImpl implements BelegFactory
    * @generated
    */
   @Override
-  public Title createTitle()
+  public Nutzen createNutzen()
   {
-    TitleImpl title = new TitleImpl();
-    return title;
+    NutzenImpl nutzen = new NutzenImpl();
+    return nutzen;
   }
 
   /**
@@ -145,10 +145,10 @@ public class BelegFactoryImpl extends EFactoryImpl implements BelegFactory
    * @generated
    */
   @Override
-  public YPart createYPart()
+  public Rolle createRolle()
   {
-    YPartImpl yPart = new YPartImpl();
-    return yPart;
+    RolleImpl rolle = new RolleImpl();
+    return rolle;
   }
 
   /**
@@ -157,10 +157,10 @@ public class BelegFactoryImpl extends EFactoryImpl implements BelegFactory
    * @generated
    */
   @Override
-  public Use createUse()
+  public Ziel createZiel()
   {
-    UseImpl use = new UseImpl();
-    return use;
+    ZielImpl ziel = new ZielImpl();
+    return ziel;
   }
 
   /**
@@ -169,10 +169,10 @@ public class BelegFactoryImpl extends EFactoryImpl implements BelegFactory
    * @generated
    */
   @Override
-  public ZPart createZPart()
+  public Substantiv createSubstantiv()
   {
-    ZPartImpl zPart = new ZPartImpl();
-    return zPart;
+    SubstantivImpl substantiv = new SubstantivImpl();
+    return substantiv;
   }
 
   /**
@@ -181,10 +181,10 @@ public class BelegFactoryImpl extends EFactoryImpl implements BelegFactory
    * @generated
    */
   @Override
-  public Goal createGoal()
+  public Infinit createInfinit()
   {
-    GoalImpl goal = new GoalImpl();
-    return goal;
+    InfinitImpl infinit = new InfinitImpl();
+    return infinit;
   }
 
   /**

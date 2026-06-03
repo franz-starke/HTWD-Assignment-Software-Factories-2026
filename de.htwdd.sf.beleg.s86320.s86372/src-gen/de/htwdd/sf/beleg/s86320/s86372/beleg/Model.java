@@ -27,7 +27,7 @@ public interface Model extends EObject
 {
   /**
    * Returns the value of the '<em><b>Story</b></em>' containment reference list.
-   * The list contents are of type {@link de.htwdd.sf.beleg.s86320.s86372.beleg.S}.
+   * The list contents are of type {@link de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Story</em>' containment reference list.
@@ -35,6 +35,6 @@ public interface Model extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<S> getStory();
+  EList<User_Story_Um> getStory();
 
 } // Model

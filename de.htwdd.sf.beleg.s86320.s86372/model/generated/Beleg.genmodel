@@ -9,35 +9,35 @@
     <genClasses ecoreClass="Beleg.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//Model/story"/>
     </genClasses>
-    <genClasses ecoreClass="Beleg.ecore#//Story">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Beleg.ecore#//Story/title"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Beleg.ecore#//Story/use"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Beleg.ecore#//Story/role"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Beleg.ecore#//Story/goal"/>
+    <genClasses ecoreClass="Beleg.ecore#//User_Story_Um">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//User_Story_Um/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//User_Story_Um/use"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//User_Story_Um/role"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//User_Story_Um/goal"/>
     </genClasses>
-    <genClasses ecoreClass="Beleg.ecore#//S">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//S/xe"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//S/ye"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//S/ze"/>
+    <genClasses ecoreClass="Beleg.ecore#//Titel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//Titel/textpart"/>
     </genClasses>
-    <genClasses ecoreClass="Beleg.ecore#//XPart">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//XPart/ti"/>
+    <genClasses ecoreClass="Beleg.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Beleg.ecore#//Text/value"/>
     </genClasses>
-    <genClasses ecoreClass="Beleg.ecore#//Title">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Beleg.ecore#//Title/Titel"/>
+    <genClasses ecoreClass="Beleg.ecore#//Nutzen">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//Nutzen/subst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Beleg.ecore#//Nutzen/zuBlock"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//Nutzen/infinit"/>
     </genClasses>
-    <genClasses ecoreClass="Beleg.ecore#//YPart">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//YPart/us"/>
+    <genClasses ecoreClass="Beleg.ecore#//Rolle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//Rolle/subst"/>
     </genClasses>
-    <genClasses ecoreClass="Beleg.ecore#//Use">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Beleg.ecore#//Use/Nutzen"/>
+    <genClasses ecoreClass="Beleg.ecore#//Ziel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//Ziel/subst"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//Ziel/infinit"/>
     </genClasses>
-    <genClasses ecoreClass="Beleg.ecore#//ZPart">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Beleg.ecore#//ZPart/Rolle"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Beleg.ecore#//ZPart/go"/>
+    <genClasses ecoreClass="Beleg.ecore#//Substantiv">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Beleg.ecore#//Substantiv/value"/>
     </genClasses>
-    <genClasses ecoreClass="Beleg.ecore#//Goal">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Beleg.ecore#//Goal/Ziel"/>
+    <genClasses ecoreClass="Beleg.ecore#//Infinit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Beleg.ecore#//Infinit/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

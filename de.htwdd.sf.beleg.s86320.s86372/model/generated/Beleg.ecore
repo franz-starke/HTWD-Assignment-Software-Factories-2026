@@ -4,42 +4,45 @@
     nsPrefix="beleg">
   <eClassifiers xsi:type="ecore:EClass" name="Model">
     <eStructuralFeatures xsi:type="ecore:EReference" name="story" upperBound="-1"
-        eType="#//S" containment="true"/>
+        eType="#//User_Story_Um" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Story">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="use" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="goal" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="User_Story_Um">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="title" eType="#//Titel"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="use" eType="#//Nutzen"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//Rolle"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goal" eType="#//Ziel" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="S">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="xe" eType="#//XPart" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ye" eType="#//YPart" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ze" eType="#//ZPart" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Titel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="textpart" upperBound="-1"
+        eType="#//Text" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="XPart">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ti" eType="#//Title" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Text">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Title">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Titel" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Nutzen">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subst" eType="#//Substantiv"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zuBlock" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="infinit" upperBound="-1"
+        eType="#//Infinit" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YPart">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="us" eType="#//Use" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Rolle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subst" eType="#//Substantiv"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Use">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Nutzen" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Ziel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subst" eType="#//Substantiv"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="infinit" upperBound="-1"
+        eType="#//Infinit" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ZPart">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Rolle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="go" eType="#//Goal" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Substantiv">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Goal">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Ziel" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Infinit">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

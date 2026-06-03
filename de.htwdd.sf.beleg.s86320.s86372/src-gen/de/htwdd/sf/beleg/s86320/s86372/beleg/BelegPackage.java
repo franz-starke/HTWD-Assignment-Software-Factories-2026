@@ -86,282 +86,282 @@ public interface BelegPackage extends EPackage
   int MODEL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.StoryImpl <em>Story</em>}' class.
+   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.User_Story_UmImpl <em>User Story Um</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.StoryImpl
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getStory()
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.User_Story_UmImpl
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getUser_Story_Um()
    * @generated
    */
-  int STORY = 1;
+  int USER_STORY_UM = 1;
 
   /**
-   * The feature id for the '<em><b>Title</b></em>' attribute list.
+   * The feature id for the '<em><b>Title</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STORY__TITLE = 0;
+  int USER_STORY_UM__TITLE = 0;
 
   /**
-   * The feature id for the '<em><b>Use</b></em>' attribute list.
+   * The feature id for the '<em><b>Use</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STORY__USE = 1;
+  int USER_STORY_UM__USE = 1;
 
   /**
-   * The feature id for the '<em><b>Role</b></em>' attribute.
+   * The feature id for the '<em><b>Role</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STORY__ROLE = 2;
+  int USER_STORY_UM__ROLE = 2;
 
   /**
-   * The feature id for the '<em><b>Goal</b></em>' attribute list.
+   * The feature id for the '<em><b>Goal</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STORY__GOAL = 3;
+  int USER_STORY_UM__GOAL = 3;
 
   /**
-   * The number of structural features of the '<em>Story</em>' class.
+   * The number of structural features of the '<em>User Story Um</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STORY_FEATURE_COUNT = 4;
+  int USER_STORY_UM_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.SImpl <em>S</em>}' class.
+   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TitelImpl <em>Titel</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.SImpl
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getS()
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TitelImpl
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getTitel()
    * @generated
    */
-  int S = 2;
+  int TITEL = 2;
 
   /**
-   * The feature id for the '<em><b>Xe</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int S__XE = 0;
-
-  /**
-   * The feature id for the '<em><b>Ye</b></em>' containment reference.
+   * The feature id for the '<em><b>Textpart</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int S__YE = 1;
+  int TITEL__TEXTPART = 0;
 
   /**
-   * The feature id for the '<em><b>Ze</b></em>' containment reference.
+   * The number of structural features of the '<em>Titel</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int S__ZE = 2;
+  int TITEL_FEATURE_COUNT = 1;
 
   /**
-   * The number of structural features of the '<em>S</em>' class.
+   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TextImpl <em>Text</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TextImpl
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getText()
+   * @generated
+   */
+  int TEXT = 3;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int S_FEATURE_COUNT = 3;
+  int TEXT__VALUE = 0;
 
   /**
-   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.XPartImpl <em>XPart</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.XPartImpl
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getXPart()
-   * @generated
-   */
-  int XPART = 3;
-
-  /**
-   * The feature id for the '<em><b>Ti</b></em>' containment reference.
+   * The number of structural features of the '<em>Text</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int XPART__TI = 0;
+  int TEXT_FEATURE_COUNT = 1;
 
   /**
-   * The number of structural features of the '<em>XPart</em>' class.
+   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.NutzenImpl <em>Nutzen</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.NutzenImpl
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getNutzen()
+   * @generated
+   */
+  int NUTZEN = 4;
+
+  /**
+   * The feature id for the '<em><b>Subst</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int XPART_FEATURE_COUNT = 1;
+  int NUTZEN__SUBST = 0;
 
   /**
-   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TitleImpl <em>Title</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TitleImpl
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getTitle()
-   * @generated
-   */
-  int TITLE = 4;
-
-  /**
-   * The feature id for the '<em><b>Titel</b></em>' attribute list.
+   * The feature id for the '<em><b>Zu Block</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TITLE__TITEL = 0;
+  int NUTZEN__ZU_BLOCK = 1;
 
   /**
-   * The number of structural features of the '<em>Title</em>' class.
+   * The feature id for the '<em><b>Infinit</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TITLE_FEATURE_COUNT = 1;
+  int NUTZEN__INFINIT = 2;
 
   /**
-   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.YPartImpl <em>YPart</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.YPartImpl
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getYPart()
-   * @generated
-   */
-  int YPART = 5;
-
-  /**
-   * The feature id for the '<em><b>Us</b></em>' containment reference.
+   * The number of structural features of the '<em>Nutzen</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int YPART__US = 0;
+  int NUTZEN_FEATURE_COUNT = 3;
 
   /**
-   * The number of structural features of the '<em>YPart</em>' class.
+   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.RolleImpl <em>Rolle</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.RolleImpl
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getRolle()
+   * @generated
+   */
+  int ROLLE = 5;
+
+  /**
+   * The feature id for the '<em><b>Subst</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int YPART_FEATURE_COUNT = 1;
+  int ROLLE__SUBST = 0;
 
   /**
-   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.UseImpl <em>Use</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.UseImpl
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getUse()
-   * @generated
-   */
-  int USE = 6;
-
-  /**
-   * The feature id for the '<em><b>Nutzen</b></em>' attribute list.
+   * The number of structural features of the '<em>Rolle</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USE__NUTZEN = 0;
+  int ROLLE_FEATURE_COUNT = 1;
 
   /**
-   * The number of structural features of the '<em>Use</em>' class.
+   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.ZielImpl <em>Ziel</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.ZielImpl
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getZiel()
+   * @generated
+   */
+  int ZIEL = 6;
+
+  /**
+   * The feature id for the '<em><b>Subst</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USE_FEATURE_COUNT = 1;
+  int ZIEL__SUBST = 0;
 
   /**
-   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.ZPartImpl <em>ZPart</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.ZPartImpl
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getZPart()
-   * @generated
-   */
-  int ZPART = 7;
-
-  /**
-   * The feature id for the '<em><b>Rolle</b></em>' attribute.
+   * The feature id for the '<em><b>Infinit</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ZPART__ROLLE = 0;
+  int ZIEL__INFINIT = 1;
 
   /**
-   * The feature id for the '<em><b>Go</b></em>' containment reference.
+   * The number of structural features of the '<em>Ziel</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ZPART__GO = 1;
+  int ZIEL_FEATURE_COUNT = 2;
 
   /**
-   * The number of structural features of the '<em>ZPart</em>' class.
+   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.SubstantivImpl <em>Substantiv</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.SubstantivImpl
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getSubstantiv()
+   * @generated
+   */
+  int SUBSTANTIV = 7;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ZPART_FEATURE_COUNT = 2;
+  int SUBSTANTIV__VALUE = 0;
 
   /**
-   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.GoalImpl <em>Goal</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.GoalImpl
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getGoal()
-   * @generated
-   */
-  int GOAL = 8;
-
-  /**
-   * The feature id for the '<em><b>Ziel</b></em>' attribute list.
+   * The number of structural features of the '<em>Substantiv</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GOAL__ZIEL = 0;
+  int SUBSTANTIV_FEATURE_COUNT = 1;
 
   /**
-   * The number of structural features of the '<em>Goal</em>' class.
+   * The meta object id for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.InfinitImpl <em>Infinit</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.InfinitImpl
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getInfinit()
+   * @generated
+   */
+  int INFINIT = 8;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GOAL_FEATURE_COUNT = 1;
+  int INFINIT__VALUE = 0;
+
+  /**
+   * The number of structural features of the '<em>Infinit</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INFINIT_FEATURE_COUNT = 1;
 
 
   /**
@@ -386,238 +386,238 @@ public interface BelegPackage extends EPackage
   EReference getModel_Story();
 
   /**
-   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Story <em>Story</em>}'.
+   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um <em>User Story Um</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Story</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Story
+   * @return the meta object for class '<em>User Story Um</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um
    * @generated
    */
-  EClass getStory();
+  EClass getUser_Story_Um();
 
   /**
-   * Returns the meta object for the attribute list '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Story#getTitle <em>Title</em>}'.
+   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um#getTitle <em>Title</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Title</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Story#getTitle()
-   * @see #getStory()
+   * @return the meta object for the containment reference '<em>Title</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um#getTitle()
+   * @see #getUser_Story_Um()
    * @generated
    */
-  EAttribute getStory_Title();
+  EReference getUser_Story_Um_Title();
 
   /**
-   * Returns the meta object for the attribute list '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Story#getUse <em>Use</em>}'.
+   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um#getUse <em>Use</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Use</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Story#getUse()
-   * @see #getStory()
+   * @return the meta object for the containment reference '<em>Use</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um#getUse()
+   * @see #getUser_Story_Um()
    * @generated
    */
-  EAttribute getStory_Use();
+  EReference getUser_Story_Um_Use();
 
   /**
-   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Story#getRole <em>Role</em>}'.
+   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um#getRole <em>Role</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Role</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Story#getRole()
-   * @see #getStory()
+   * @return the meta object for the containment reference '<em>Role</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um#getRole()
+   * @see #getUser_Story_Um()
    * @generated
    */
-  EAttribute getStory_Role();
+  EReference getUser_Story_Um_Role();
 
   /**
-   * Returns the meta object for the attribute list '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Story#getGoal <em>Goal</em>}'.
+   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um#getGoal <em>Goal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Goal</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Story#getGoal()
-   * @see #getStory()
+   * @return the meta object for the containment reference '<em>Goal</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um#getGoal()
+   * @see #getUser_Story_Um()
    * @generated
    */
-  EAttribute getStory_Goal();
+  EReference getUser_Story_Um_Goal();
 
   /**
-   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.S <em>S</em>}'.
+   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Titel <em>Titel</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>S</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.S
+   * @return the meta object for class '<em>Titel</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Titel
    * @generated
    */
-  EClass getS();
+  EClass getTitel();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.S#getXe <em>Xe</em>}'.
+   * Returns the meta object for the containment reference list '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Titel#getTextpart <em>Textpart</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Xe</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.S#getXe()
-   * @see #getS()
+   * @return the meta object for the containment reference list '<em>Textpart</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Titel#getTextpart()
+   * @see #getTitel()
    * @generated
    */
-  EReference getS_Xe();
+  EReference getTitel_Textpart();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.S#getYe <em>Ye</em>}'.
+   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Text <em>Text</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Ye</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.S#getYe()
-   * @see #getS()
+   * @return the meta object for class '<em>Text</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Text
    * @generated
    */
-  EReference getS_Ye();
+  EClass getText();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.S#getZe <em>Ze</em>}'.
+   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Text#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Ze</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.S#getZe()
-   * @see #getS()
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Text#getValue()
+   * @see #getText()
    * @generated
    */
-  EReference getS_Ze();
+  EAttribute getText_Value();
 
   /**
-   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.XPart <em>XPart</em>}'.
+   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Nutzen <em>Nutzen</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>XPart</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.XPart
+   * @return the meta object for class '<em>Nutzen</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Nutzen
    * @generated
    */
-  EClass getXPart();
+  EClass getNutzen();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.XPart#getTi <em>Ti</em>}'.
+   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Nutzen#getSubst <em>Subst</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Ti</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.XPart#getTi()
-   * @see #getXPart()
+   * @return the meta object for the containment reference '<em>Subst</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Nutzen#getSubst()
+   * @see #getNutzen()
    * @generated
    */
-  EReference getXPart_Ti();
+  EReference getNutzen_Subst();
 
   /**
-   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Title <em>Title</em>}'.
+   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Nutzen#getZuBlock <em>Zu Block</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Title</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Title
+   * @return the meta object for the attribute '<em>Zu Block</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Nutzen#getZuBlock()
+   * @see #getNutzen()
    * @generated
    */
-  EClass getTitle();
+  EAttribute getNutzen_ZuBlock();
 
   /**
-   * Returns the meta object for the attribute list '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Title#getTitel <em>Titel</em>}'.
+   * Returns the meta object for the containment reference list '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Nutzen#getInfinit <em>Infinit</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Titel</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Title#getTitel()
-   * @see #getTitle()
+   * @return the meta object for the containment reference list '<em>Infinit</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Nutzen#getInfinit()
+   * @see #getNutzen()
    * @generated
    */
-  EAttribute getTitle_Titel();
+  EReference getNutzen_Infinit();
 
   /**
-   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.YPart <em>YPart</em>}'.
+   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Rolle <em>Rolle</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>YPart</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.YPart
+   * @return the meta object for class '<em>Rolle</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Rolle
    * @generated
    */
-  EClass getYPart();
+  EClass getRolle();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.YPart#getUs <em>Us</em>}'.
+   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Rolle#getSubst <em>Subst</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Us</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.YPart#getUs()
-   * @see #getYPart()
+   * @return the meta object for the containment reference '<em>Subst</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Rolle#getSubst()
+   * @see #getRolle()
    * @generated
    */
-  EReference getYPart_Us();
+  EReference getRolle_Subst();
 
   /**
-   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Use <em>Use</em>}'.
+   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Ziel <em>Ziel</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Use</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Use
+   * @return the meta object for class '<em>Ziel</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Ziel
    * @generated
    */
-  EClass getUse();
+  EClass getZiel();
 
   /**
-   * Returns the meta object for the attribute list '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Use#getNutzen <em>Nutzen</em>}'.
+   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Ziel#getSubst <em>Subst</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Nutzen</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Use#getNutzen()
-   * @see #getUse()
+   * @return the meta object for the containment reference '<em>Subst</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Ziel#getSubst()
+   * @see #getZiel()
    * @generated
    */
-  EAttribute getUse_Nutzen();
+  EReference getZiel_Subst();
 
   /**
-   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.ZPart <em>ZPart</em>}'.
+   * Returns the meta object for the containment reference list '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Ziel#getInfinit <em>Infinit</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>ZPart</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.ZPart
+   * @return the meta object for the containment reference list '<em>Infinit</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Ziel#getInfinit()
+   * @see #getZiel()
    * @generated
    */
-  EClass getZPart();
+  EReference getZiel_Infinit();
 
   /**
-   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.ZPart#getRolle <em>Rolle</em>}'.
+   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Substantiv <em>Substantiv</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Rolle</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.ZPart#getRolle()
-   * @see #getZPart()
+   * @return the meta object for class '<em>Substantiv</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Substantiv
    * @generated
    */
-  EAttribute getZPart_Rolle();
+  EClass getSubstantiv();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.ZPart#getGo <em>Go</em>}'.
+   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Substantiv#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Go</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.ZPart#getGo()
-   * @see #getZPart()
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Substantiv#getValue()
+   * @see #getSubstantiv()
    * @generated
    */
-  EReference getZPart_Go();
+  EAttribute getSubstantiv_Value();
 
   /**
-   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Goal <em>Goal</em>}'.
+   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Infinit <em>Infinit</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Goal</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Goal
+   * @return the meta object for class '<em>Infinit</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Infinit
    * @generated
    */
-  EClass getGoal();
+  EClass getInfinit();
 
   /**
-   * Returns the meta object for the attribute list '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Goal#getZiel <em>Ziel</em>}'.
+   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.Infinit#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Ziel</em>'.
-   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Goal#getZiel()
-   * @see #getGoal()
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see de.htwdd.sf.beleg.s86320.s86372.beleg.Infinit#getValue()
+   * @see #getInfinit()
    * @generated
    */
-  EAttribute getGoal_Ziel();
+  EAttribute getInfinit_Value();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -661,196 +661,196 @@ public interface BelegPackage extends EPackage
     EReference MODEL__STORY = eINSTANCE.getModel_Story();
 
     /**
-     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.StoryImpl <em>Story</em>}' class.
+     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.User_Story_UmImpl <em>User Story Um</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.StoryImpl
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getStory()
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.User_Story_UmImpl
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getUser_Story_Um()
      * @generated
      */
-    EClass STORY = eINSTANCE.getStory();
+    EClass USER_STORY_UM = eINSTANCE.getUser_Story_Um();
 
     /**
-     * The meta object literal for the '<em><b>Title</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Title</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STORY__TITLE = eINSTANCE.getStory_Title();
+    EReference USER_STORY_UM__TITLE = eINSTANCE.getUser_Story_Um_Title();
 
     /**
-     * The meta object literal for the '<em><b>Use</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Use</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STORY__USE = eINSTANCE.getStory_Use();
+    EReference USER_STORY_UM__USE = eINSTANCE.getUser_Story_Um_Use();
 
     /**
-     * The meta object literal for the '<em><b>Role</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Role</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STORY__ROLE = eINSTANCE.getStory_Role();
+    EReference USER_STORY_UM__ROLE = eINSTANCE.getUser_Story_Um_Role();
 
     /**
-     * The meta object literal for the '<em><b>Goal</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Goal</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STORY__GOAL = eINSTANCE.getStory_Goal();
+    EReference USER_STORY_UM__GOAL = eINSTANCE.getUser_Story_Um_Goal();
 
     /**
-     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.SImpl <em>S</em>}' class.
+     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TitelImpl <em>Titel</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.SImpl
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getS()
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TitelImpl
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getTitel()
      * @generated
      */
-    EClass S = eINSTANCE.getS();
+    EClass TITEL = eINSTANCE.getTitel();
 
     /**
-     * The meta object literal for the '<em><b>Xe</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Textpart</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference S__XE = eINSTANCE.getS_Xe();
+    EReference TITEL__TEXTPART = eINSTANCE.getTitel_Textpart();
 
     /**
-     * The meta object literal for the '<em><b>Ye</b></em>' containment reference feature.
+     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TextImpl <em>Text</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TextImpl
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getText()
      * @generated
      */
-    EReference S__YE = eINSTANCE.getS_Ye();
+    EClass TEXT = eINSTANCE.getText();
 
     /**
-     * The meta object literal for the '<em><b>Ze</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference S__ZE = eINSTANCE.getS_Ze();
+    EAttribute TEXT__VALUE = eINSTANCE.getText_Value();
 
     /**
-     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.XPartImpl <em>XPart</em>}' class.
+     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.NutzenImpl <em>Nutzen</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.XPartImpl
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getXPart()
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.NutzenImpl
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getNutzen()
      * @generated
      */
-    EClass XPART = eINSTANCE.getXPart();
+    EClass NUTZEN = eINSTANCE.getNutzen();
 
     /**
-     * The meta object literal for the '<em><b>Ti</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Subst</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference XPART__TI = eINSTANCE.getXPart_Ti();
+    EReference NUTZEN__SUBST = eINSTANCE.getNutzen_Subst();
 
     /**
-     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TitleImpl <em>Title</em>}' class.
+     * The meta object literal for the '<em><b>Zu Block</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TitleImpl
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getTitle()
      * @generated
      */
-    EClass TITLE = eINSTANCE.getTitle();
+    EAttribute NUTZEN__ZU_BLOCK = eINSTANCE.getNutzen_ZuBlock();
 
     /**
-     * The meta object literal for the '<em><b>Titel</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Infinit</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TITLE__TITEL = eINSTANCE.getTitle_Titel();
+    EReference NUTZEN__INFINIT = eINSTANCE.getNutzen_Infinit();
 
     /**
-     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.YPartImpl <em>YPart</em>}' class.
+     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.RolleImpl <em>Rolle</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.YPartImpl
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getYPart()
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.RolleImpl
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getRolle()
      * @generated
      */
-    EClass YPART = eINSTANCE.getYPart();
+    EClass ROLLE = eINSTANCE.getRolle();
 
     /**
-     * The meta object literal for the '<em><b>Us</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Subst</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference YPART__US = eINSTANCE.getYPart_Us();
+    EReference ROLLE__SUBST = eINSTANCE.getRolle_Subst();
 
     /**
-     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.UseImpl <em>Use</em>}' class.
+     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.ZielImpl <em>Ziel</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.UseImpl
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getUse()
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.ZielImpl
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getZiel()
      * @generated
      */
-    EClass USE = eINSTANCE.getUse();
+    EClass ZIEL = eINSTANCE.getZiel();
 
     /**
-     * The meta object literal for the '<em><b>Nutzen</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Subst</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute USE__NUTZEN = eINSTANCE.getUse_Nutzen();
+    EReference ZIEL__SUBST = eINSTANCE.getZiel_Subst();
 
     /**
-     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.ZPartImpl <em>ZPart</em>}' class.
+     * The meta object literal for the '<em><b>Infinit</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.ZPartImpl
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getZPart()
      * @generated
      */
-    EClass ZPART = eINSTANCE.getZPart();
+    EReference ZIEL__INFINIT = eINSTANCE.getZiel_Infinit();
 
     /**
-     * The meta object literal for the '<em><b>Rolle</b></em>' attribute feature.
+     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.SubstantivImpl <em>Substantiv</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.SubstantivImpl
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getSubstantiv()
      * @generated
      */
-    EAttribute ZPART__ROLLE = eINSTANCE.getZPart_Rolle();
+    EClass SUBSTANTIV = eINSTANCE.getSubstantiv();
 
     /**
-     * The meta object literal for the '<em><b>Go</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ZPART__GO = eINSTANCE.getZPart_Go();
+    EAttribute SUBSTANTIV__VALUE = eINSTANCE.getSubstantiv_Value();
 
     /**
-     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.GoalImpl <em>Goal</em>}' class.
+     * The meta object literal for the '{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.InfinitImpl <em>Infinit</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.GoalImpl
-     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getGoal()
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.InfinitImpl
+     * @see de.htwdd.sf.beleg.s86320.s86372.beleg.impl.BelegPackageImpl#getInfinit()
      * @generated
      */
-    EClass GOAL = eINSTANCE.getGoal();
+    EClass INFINIT = eINSTANCE.getInfinit();
 
     /**
-     * The meta object literal for the '<em><b>Ziel</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GOAL__ZIEL = eINSTANCE.getGoal_Ziel();
+    EAttribute INFINIT__VALUE = eINSTANCE.getInfinit_Value();
 
   }
 

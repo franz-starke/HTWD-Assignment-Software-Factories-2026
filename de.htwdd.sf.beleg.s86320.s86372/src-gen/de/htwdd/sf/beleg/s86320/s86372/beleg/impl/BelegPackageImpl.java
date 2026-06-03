@@ -5,14 +5,15 @@ package de.htwdd.sf.beleg.s86320.s86372.beleg.impl;
 
 import de.htwdd.sf.beleg.s86320.s86372.beleg.BelegFactory;
 import de.htwdd.sf.beleg.s86320.s86372.beleg.BelegPackage;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.Goal;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Infinit;
 import de.htwdd.sf.beleg.s86320.s86372.beleg.Model;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.Story;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.Title;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.Use;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.XPart;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.YPart;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.ZPart;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Nutzen;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Rolle;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Substantiv;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Text;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Titel;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Ziel;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -41,56 +42,56 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass storyEClass = null;
+  private EClass user_Story_UmEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass sEClass = null;
+  private EClass titelEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass xPartEClass = null;
+  private EClass textEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass titleEClass = null;
+  private EClass nutzenEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass yPartEClass = null;
+  private EClass rolleEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass useEClass = null;
+  private EClass zielEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass zPartEClass = null;
+  private EClass substantivEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass goalEClass = null;
+  private EClass infinitEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -182,9 +183,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EClass getStory()
+  public EClass getUser_Story_Um()
   {
-    return storyEClass;
+    return user_Story_UmEClass;
   }
 
   /**
@@ -193,9 +194,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EAttribute getStory_Title()
+  public EReference getUser_Story_Um_Title()
   {
-    return (EAttribute)storyEClass.getEStructuralFeatures().get(0);
+    return (EReference)user_Story_UmEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -204,9 +205,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EAttribute getStory_Use()
+  public EReference getUser_Story_Um_Use()
   {
-    return (EAttribute)storyEClass.getEStructuralFeatures().get(1);
+    return (EReference)user_Story_UmEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -215,9 +216,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EAttribute getStory_Role()
+  public EReference getUser_Story_Um_Role()
   {
-    return (EAttribute)storyEClass.getEStructuralFeatures().get(2);
+    return (EReference)user_Story_UmEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -226,9 +227,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EAttribute getStory_Goal()
+  public EReference getUser_Story_Um_Goal()
   {
-    return (EAttribute)storyEClass.getEStructuralFeatures().get(3);
+    return (EReference)user_Story_UmEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -237,9 +238,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EClass getS()
+  public EClass getTitel()
   {
-    return sEClass;
+    return titelEClass;
   }
 
   /**
@@ -248,9 +249,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EReference getS_Xe()
+  public EReference getTitel_Textpart()
   {
-    return (EReference)sEClass.getEStructuralFeatures().get(0);
+    return (EReference)titelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -259,9 +260,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EReference getS_Ye()
+  public EClass getText()
   {
-    return (EReference)sEClass.getEStructuralFeatures().get(1);
+    return textEClass;
   }
 
   /**
@@ -270,9 +271,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EReference getS_Ze()
+  public EAttribute getText_Value()
   {
-    return (EReference)sEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)textEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -281,9 +282,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EClass getXPart()
+  public EClass getNutzen()
   {
-    return xPartEClass;
+    return nutzenEClass;
   }
 
   /**
@@ -292,9 +293,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EReference getXPart_Ti()
+  public EReference getNutzen_Subst()
   {
-    return (EReference)xPartEClass.getEStructuralFeatures().get(0);
+    return (EReference)nutzenEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -303,9 +304,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EClass getTitle()
+  public EAttribute getNutzen_ZuBlock()
   {
-    return titleEClass;
+    return (EAttribute)nutzenEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -314,9 +315,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EAttribute getTitle_Titel()
+  public EReference getNutzen_Infinit()
   {
-    return (EAttribute)titleEClass.getEStructuralFeatures().get(0);
+    return (EReference)nutzenEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -325,9 +326,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EClass getYPart()
+  public EClass getRolle()
   {
-    return yPartEClass;
+    return rolleEClass;
   }
 
   /**
@@ -336,9 +337,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EReference getYPart_Us()
+  public EReference getRolle_Subst()
   {
-    return (EReference)yPartEClass.getEStructuralFeatures().get(0);
+    return (EReference)rolleEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -347,9 +348,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EClass getUse()
+  public EClass getZiel()
   {
-    return useEClass;
+    return zielEClass;
   }
 
   /**
@@ -358,9 +359,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EAttribute getUse_Nutzen()
+  public EReference getZiel_Subst()
   {
-    return (EAttribute)useEClass.getEStructuralFeatures().get(0);
+    return (EReference)zielEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -369,9 +370,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EClass getZPart()
+  public EReference getZiel_Infinit()
   {
-    return zPartEClass;
+    return (EReference)zielEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -380,9 +381,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EAttribute getZPart_Rolle()
+  public EClass getSubstantiv()
   {
-    return (EAttribute)zPartEClass.getEStructuralFeatures().get(0);
+    return substantivEClass;
   }
 
   /**
@@ -391,9 +392,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EReference getZPart_Go()
+  public EAttribute getSubstantiv_Value()
   {
-    return (EReference)zPartEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)substantivEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -402,9 +403,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EClass getGoal()
+  public EClass getInfinit()
   {
-    return goalEClass;
+    return infinitEClass;
   }
 
   /**
@@ -413,9 +414,9 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
    * @generated
    */
   @Override
-  public EAttribute getGoal_Ziel()
+  public EAttribute getInfinit_Value()
   {
-    return (EAttribute)goalEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)infinitEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -452,35 +453,35 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
     modelEClass = createEClass(MODEL);
     createEReference(modelEClass, MODEL__STORY);
 
-    storyEClass = createEClass(STORY);
-    createEAttribute(storyEClass, STORY__TITLE);
-    createEAttribute(storyEClass, STORY__USE);
-    createEAttribute(storyEClass, STORY__ROLE);
-    createEAttribute(storyEClass, STORY__GOAL);
+    user_Story_UmEClass = createEClass(USER_STORY_UM);
+    createEReference(user_Story_UmEClass, USER_STORY_UM__TITLE);
+    createEReference(user_Story_UmEClass, USER_STORY_UM__USE);
+    createEReference(user_Story_UmEClass, USER_STORY_UM__ROLE);
+    createEReference(user_Story_UmEClass, USER_STORY_UM__GOAL);
 
-    sEClass = createEClass(S);
-    createEReference(sEClass, S__XE);
-    createEReference(sEClass, S__YE);
-    createEReference(sEClass, S__ZE);
+    titelEClass = createEClass(TITEL);
+    createEReference(titelEClass, TITEL__TEXTPART);
 
-    xPartEClass = createEClass(XPART);
-    createEReference(xPartEClass, XPART__TI);
+    textEClass = createEClass(TEXT);
+    createEAttribute(textEClass, TEXT__VALUE);
 
-    titleEClass = createEClass(TITLE);
-    createEAttribute(titleEClass, TITLE__TITEL);
+    nutzenEClass = createEClass(NUTZEN);
+    createEReference(nutzenEClass, NUTZEN__SUBST);
+    createEAttribute(nutzenEClass, NUTZEN__ZU_BLOCK);
+    createEReference(nutzenEClass, NUTZEN__INFINIT);
 
-    yPartEClass = createEClass(YPART);
-    createEReference(yPartEClass, YPART__US);
+    rolleEClass = createEClass(ROLLE);
+    createEReference(rolleEClass, ROLLE__SUBST);
 
-    useEClass = createEClass(USE);
-    createEAttribute(useEClass, USE__NUTZEN);
+    zielEClass = createEClass(ZIEL);
+    createEReference(zielEClass, ZIEL__SUBST);
+    createEReference(zielEClass, ZIEL__INFINIT);
 
-    zPartEClass = createEClass(ZPART);
-    createEAttribute(zPartEClass, ZPART__ROLLE);
-    createEReference(zPartEClass, ZPART__GO);
+    substantivEClass = createEClass(SUBSTANTIV);
+    createEAttribute(substantivEClass, SUBSTANTIV__VALUE);
 
-    goalEClass = createEClass(GOAL);
-    createEAttribute(goalEClass, GOAL__ZIEL);
+    infinitEClass = createEClass(INFINIT);
+    createEAttribute(infinitEClass, INFINIT__VALUE);
   }
 
   /**
@@ -515,37 +516,37 @@ public class BelegPackageImpl extends EPackageImpl implements BelegPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Story(), this.getS(), null, "story", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Story(), this.getUser_Story_Um(), null, "story", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(storyEClass, Story.class, "Story", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStory_Title(), ecorePackage.getEString(), "title", null, 0, -1, Story.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStory_Use(), ecorePackage.getEString(), "use", null, 0, -1, Story.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStory_Role(), ecorePackage.getEString(), "role", null, 0, 1, Story.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStory_Goal(), ecorePackage.getEString(), "goal", null, 0, -1, Story.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(user_Story_UmEClass, User_Story_Um.class, "User_Story_Um", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getUser_Story_Um_Title(), this.getTitel(), null, "title", null, 0, 1, User_Story_Um.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getUser_Story_Um_Use(), this.getNutzen(), null, "use", null, 0, 1, User_Story_Um.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getUser_Story_Um_Role(), this.getRolle(), null, "role", null, 0, 1, User_Story_Um.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getUser_Story_Um_Goal(), this.getZiel(), null, "goal", null, 0, 1, User_Story_Um.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(sEClass, de.htwdd.sf.beleg.s86320.s86372.beleg.S.class, "S", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getS_Xe(), this.getXPart(), null, "xe", null, 0, 1, de.htwdd.sf.beleg.s86320.s86372.beleg.S.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getS_Ye(), this.getYPart(), null, "ye", null, 0, 1, de.htwdd.sf.beleg.s86320.s86372.beleg.S.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getS_Ze(), this.getZPart(), null, "ze", null, 0, 1, de.htwdd.sf.beleg.s86320.s86372.beleg.S.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(titelEClass, Titel.class, "Titel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTitel_Textpart(), this.getText(), null, "textpart", null, 0, -1, Titel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(xPartEClass, XPart.class, "XPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getXPart_Ti(), this.getTitle(), null, "ti", null, 0, 1, XPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getText_Value(), ecorePackage.getEString(), "value", null, 0, 1, Text.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(titleEClass, Title.class, "Title", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTitle_Titel(), ecorePackage.getEString(), "Titel", null, 0, -1, Title.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(nutzenEClass, Nutzen.class, "Nutzen", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getNutzen_Subst(), this.getSubstantiv(), null, "subst", null, 0, 1, Nutzen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNutzen_ZuBlock(), ecorePackage.getEString(), "zuBlock", null, 0, 1, Nutzen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNutzen_Infinit(), this.getInfinit(), null, "infinit", null, 0, -1, Nutzen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(yPartEClass, YPart.class, "YPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getYPart_Us(), this.getUse(), null, "us", null, 0, 1, YPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(rolleEClass, Rolle.class, "Rolle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRolle_Subst(), this.getSubstantiv(), null, "subst", null, 0, 1, Rolle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(useEClass, Use.class, "Use", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getUse_Nutzen(), ecorePackage.getEString(), "Nutzen", null, 0, -1, Use.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(zielEClass, Ziel.class, "Ziel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getZiel_Subst(), this.getSubstantiv(), null, "subst", null, 0, 1, Ziel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getZiel_Infinit(), this.getInfinit(), null, "infinit", null, 0, -1, Ziel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(zPartEClass, ZPart.class, "ZPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getZPart_Rolle(), ecorePackage.getEString(), "Rolle", null, 0, 1, ZPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getZPart_Go(), this.getGoal(), null, "go", null, 0, 1, ZPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(substantivEClass, Substantiv.class, "Substantiv", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSubstantiv_Value(), ecorePackage.getEString(), "value", null, 0, 1, Substantiv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(goalEClass, Goal.class, "Goal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGoal_Ziel(), ecorePackage.getEString(), "Ziel", null, 0, -1, Goal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(infinitEClass, Infinit.class, "Infinit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInfinit_Value(), ecorePackage.getEString(), "value", null, 0, 1, Infinit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

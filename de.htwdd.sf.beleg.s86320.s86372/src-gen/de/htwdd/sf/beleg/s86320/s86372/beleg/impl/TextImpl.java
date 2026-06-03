@@ -4,54 +4,56 @@
 package de.htwdd.sf.beleg.s86320.s86372.beleg.impl;
 
 import de.htwdd.sf.beleg.s86320.s86372.beleg.BelegPackage;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.Model;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Text;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
+ * An implementation of the model object '<em><b>Text</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.ModelImpl#getStory <em>Story</em>}</li>
+ *   <li>{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TextImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ModelImpl extends MinimalEObjectImpl.Container implements Model
+public class TextImpl extends MinimalEObjectImpl.Container implements Text
 {
   /**
-   * The cached value of the '{@link #getStory() <em>Story</em>}' containment reference list.
+   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStory()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected EList<User_Story_Um> story;
+  protected static final String VALUE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue()
+   * @generated
+   * @ordered
+   */
+  protected String value = VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModelImpl()
+  protected TextImpl()
   {
     super();
   }
@@ -64,7 +66,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   @Override
   protected EClass eStaticClass()
   {
-    return BelegPackage.Literals.MODEL;
+    return BelegPackage.Literals.TEXT;
   }
 
   /**
@@ -73,13 +75,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    */
   @Override
-  public EList<User_Story_Um> getStory()
+  public String getValue()
   {
-    if (story == null)
-    {
-      story = new EObjectContainmentEList<User_Story_Um>(User_Story_Um.class, this, BelegPackage.MODEL__STORY);
-    }
-    return story;
+    return value;
   }
 
   /**
@@ -88,14 +86,12 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    */
   @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  public void setValue(String newValue)
   {
-    switch (featureID)
-    {
-      case BelegPackage.MODEL__STORY:
-        return ((InternalEList<?>)getStory()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    String oldValue = value;
+    value = newValue;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BelegPackage.TEXT__VALUE, oldValue, value));
   }
 
   /**
@@ -108,8 +104,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BelegPackage.MODEL__STORY:
-        return getStory();
+      case BelegPackage.TEXT__VALUE:
+        return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,15 +115,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case BelegPackage.MODEL__STORY:
-        getStory().clear();
-        getStory().addAll((Collection<? extends User_Story_Um>)newValue);
+      case BelegPackage.TEXT__VALUE:
+        setValue((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -143,8 +137,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BelegPackage.MODEL__STORY:
-        getStory().clear();
+      case BelegPackage.TEXT__VALUE:
+        setValue(VALUE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -160,10 +154,27 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BelegPackage.MODEL__STORY:
-        return story != null && !story.isEmpty();
+      case BelegPackage.TEXT__VALUE:
+        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }
     return super.eIsSet(featureID);
   }
 
-} //ModelImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (value: ");
+    result.append(value);
+    result.append(')');
+    return result.toString();
+  }
+
+} //TextImpl

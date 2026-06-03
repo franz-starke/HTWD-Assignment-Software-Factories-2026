@@ -4,8 +4,8 @@
 package de.htwdd.sf.beleg.s86320.s86372.beleg.impl;
 
 import de.htwdd.sf.beleg.s86320.s86372.beleg.BelegPackage;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.Model;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.User_Story_Um;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Text;
+import de.htwdd.sf.beleg.s86320.s86372.beleg.Titel;
 
 import java.util.Collection;
 
@@ -23,35 +23,35 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
+ * An implementation of the model object '<em><b>Titel</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.ModelImpl#getStory <em>Story</em>}</li>
+ *   <li>{@link de.htwdd.sf.beleg.s86320.s86372.beleg.impl.TitelImpl#getTextpart <em>Textpart</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ModelImpl extends MinimalEObjectImpl.Container implements Model
+public class TitelImpl extends MinimalEObjectImpl.Container implements Titel
 {
   /**
-   * The cached value of the '{@link #getStory() <em>Story</em>}' containment reference list.
+   * The cached value of the '{@link #getTextpart() <em>Textpart</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStory()
+   * @see #getTextpart()
    * @generated
    * @ordered
    */
-  protected EList<User_Story_Um> story;
+  protected EList<Text> textpart;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModelImpl()
+  protected TitelImpl()
   {
     super();
   }
@@ -64,7 +64,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   @Override
   protected EClass eStaticClass()
   {
-    return BelegPackage.Literals.MODEL;
+    return BelegPackage.Literals.TITEL;
   }
 
   /**
@@ -73,13 +73,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    */
   @Override
-  public EList<User_Story_Um> getStory()
+  public EList<Text> getTextpart()
   {
-    if (story == null)
+    if (textpart == null)
     {
-      story = new EObjectContainmentEList<User_Story_Um>(User_Story_Um.class, this, BelegPackage.MODEL__STORY);
+      textpart = new EObjectContainmentEList<Text>(Text.class, this, BelegPackage.TITEL__TEXTPART);
     }
-    return story;
+    return textpart;
   }
 
   /**
@@ -92,8 +92,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BelegPackage.MODEL__STORY:
-        return ((InternalEList<?>)getStory()).basicRemove(otherEnd, msgs);
+      case BelegPackage.TITEL__TEXTPART:
+        return ((InternalEList<?>)getTextpart()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -108,8 +108,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BelegPackage.MODEL__STORY:
-        return getStory();
+      case BelegPackage.TITEL__TEXTPART:
+        return getTextpart();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -125,9 +125,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BelegPackage.MODEL__STORY:
-        getStory().clear();
-        getStory().addAll((Collection<? extends User_Story_Um>)newValue);
+      case BelegPackage.TITEL__TEXTPART:
+        getTextpart().clear();
+        getTextpart().addAll((Collection<? extends Text>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -143,8 +143,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BelegPackage.MODEL__STORY:
-        getStory().clear();
+      case BelegPackage.TITEL__TEXTPART:
+        getTextpart().clear();
         return;
     }
     super.eUnset(featureID);
@@ -160,10 +160,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BelegPackage.MODEL__STORY:
-        return story != null && !story.isEmpty();
+      case BelegPackage.TITEL__TEXTPART:
+        return textpart != null && !textpart.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //ModelImpl
+} //TitelImpl

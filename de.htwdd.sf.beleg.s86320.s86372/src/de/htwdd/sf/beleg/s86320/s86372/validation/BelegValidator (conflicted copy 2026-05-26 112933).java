@@ -3,10 +3,6 @@
  */
 package de.htwdd.sf.beleg.s86320.s86372.validation;
 
-import org.eclipse.xtext.validation.Check;
-
-import de.htwdd.sf.beleg.s86320.s86372.beleg.Substantiv;
-import de.htwdd.sf.beleg.s86320.s86372.beleg.Infinit;
 
 /**
  * This class contains custom validation rules. 
@@ -25,19 +21,5 @@ public class BelegValidator extends AbstractBelegValidator {
 //					INVALID_NAME);
 //		}
 //	}
-	
-	@Check
-	public void checkSubstantiv(Substantiv substantiv ) {
-		if (!Character.isUpperCase(substantiv.getValue().charAt(0))) {
-			error("Substantiv muss groß beginnen", null);
-		}
-	}
-	
-	@Check
-	public void checkInfinit(Infinit infinit) {
-		if (!Character.isLowerCase(infinit.getValue().charAt(0))) {
-			error("Infinit muss klein beginnen", null);
-		}
-	}
 	
 }

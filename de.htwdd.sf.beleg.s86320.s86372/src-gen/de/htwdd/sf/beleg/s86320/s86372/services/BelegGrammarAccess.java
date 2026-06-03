@@ -24,340 +24,302 @@ public class BelegGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.Model");
 		private final Assignment cStoryAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cStorySParserRuleCall_0 = (RuleCall)cStoryAssignment.eContents().get(0);
+		private final RuleCall cStoryUser_Story_UmParserRuleCall_0 = (RuleCall)cStoryAssignment.eContents().get(0);
 		
 		//Model:
-		//    story+=S*
+		//    story+=User_Story_Um*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//story+=S*
+		//story+=User_Story_Um*
 		public Assignment getStoryAssignment() { return cStoryAssignment; }
 		
-		//S
-		public RuleCall getStorySParserRuleCall_0() { return cStorySParserRuleCall_0; }
+		//User_Story_Um
+		public RuleCall getStoryUser_Story_UmParserRuleCall_0() { return cStoryUser_Story_UmParserRuleCall_0; }
 	}
-	public class StoryElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.Story");
+	public class User_Story_UmElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.User_Story_Um");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cTitleAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cTitleIDTerminalRuleCall_0_0 = (RuleCall)cTitleAssignment_0.eContents().get(0);
-		private final Assignment cTitleAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTitleIDTerminalRuleCall_1_0 = (RuleCall)cTitleAssignment_1.eContents().get(0);
-		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cUmKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cUseAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cUseIDTerminalRuleCall_4_0 = (RuleCall)cUseAssignment_4.eContents().get(0);
-		private final Assignment cUseAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cUseIDTerminalRuleCall_5_0 = (RuleCall)cUseAssignment_5.eContents().get(0);
-		private final Keyword cCommaKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cMöchteKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Keyword cIchKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Keyword cAlsKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cRoleAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cRoleIDTerminalRuleCall_10_0 = (RuleCall)cRoleAssignment_10.eContents().get(0);
-		private final Assignment cGoalAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cGoalIDTerminalRuleCall_11_0 = (RuleCall)cGoalAssignment_11.eContents().get(0);
-		private final Assignment cGoalAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cGoalIDTerminalRuleCall_12_0 = (RuleCall)cGoalAssignment_12.eContents().get(0);
-		private final Keyword cFullStopKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final RuleCall cTitleTitelParserRuleCall_0_0 = (RuleCall)cTitleAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cUmKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cUseAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cUseNutzenParserRuleCall_3_0 = (RuleCall)cUseAssignment_3.eContents().get(0);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cMöchteKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cIchKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cAlsKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cRoleAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cRoleRolleParserRuleCall_8_0 = (RuleCall)cRoleAssignment_8.eContents().get(0);
+		private final Assignment cGoalAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cGoalZielParserRuleCall_9_0 = (RuleCall)cGoalAssignment_9.eContents().get(0);
+		private final Keyword cFullStopKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//Story:
-		//    title+=ID (title+=ID)*
-		//    ':' 'Um'
-		//    use+=ID (use+=ID)*
-		//    ','    'möchte' 'ich' 'als'
-		//    role=ID
-		//    goal+=ID (goal+=ID)*
+		////Null testen:
+		////Als Bearbeiter möchte ich Anträge einsehen, um Projekte zu bezuschussen.
+		////
+		////Eins testen:
+		////Als Bearbeiter möchte ich Pdf exportieren, um Dokumente zuückzusenden.
+		////
+		////Zwei testen:
+		////Als Bearbeiter möchte ich Dokumente kommentieren, um Anmerkungen hinzuzufügen.
+		////
+		////Drei testen:
+		////Als Bediener möchte ich Roboter steuern, um Kabel zurechtzuzupfen.
+		////
+		////Vier testen:
+		////Um Projekte zu bezuschussen, möchte ich als Bearbeiter Anträge einsehen.
+		////
+		////Fünf testen:
+		////Um Dokumente zurückzusenden, möchte ich als Bearbeiter Dateien exportieren.
+		////
+		////Sechs testen:
+		////Um Anmerkungen hinzuzufügen, möchte ich als Bearbeiter Dokumente kommentieren.
+		////
+		////Sieben testen:
+		////Um Kabel zurechtzuzupfen, möchte ich als Bediener Roboter steuern.
+		//// <Titel>: Um <Nutzen>, möchte ich als <Rolle> <Ziel/Wunsch>.
+		//User_Story_Um:
+		//    title=Titel ':'
+		//    'Um' use=Nutzen ','
+		//    'möchte' 'ich' 'als'
+		//    role=Rolle
+		//    goal=Ziel
 		//    '.'
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//title+=ID (title+=ID)*
-		//':' 'Um'
-		//use+=ID (use+=ID)*
-		//','    'möchte' 'ich' 'als'
-		//role=ID
-		//goal+=ID (goal+=ID)*
+		//title=Titel ':'
+		//'Um' use=Nutzen ','
+		//'möchte' 'ich' 'als'
+		//role=Rolle
+		//goal=Ziel
 		//'.'
 		public Group getGroup() { return cGroup; }
 		
-		//title+=ID
+		//title=Titel
 		public Assignment getTitleAssignment_0() { return cTitleAssignment_0; }
 		
-		//ID
-		public RuleCall getTitleIDTerminalRuleCall_0_0() { return cTitleIDTerminalRuleCall_0_0; }
-		
-		//(title+=ID)*
-		public Assignment getTitleAssignment_1() { return cTitleAssignment_1; }
-		
-		//ID
-		public RuleCall getTitleIDTerminalRuleCall_1_0() { return cTitleIDTerminalRuleCall_1_0; }
-		
-		//':'
-		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
-		
-		//'Um'
-		public Keyword getUmKeyword_3() { return cUmKeyword_3; }
-		
-		//use+=ID
-		public Assignment getUseAssignment_4() { return cUseAssignment_4; }
-		
-		//ID
-		public RuleCall getUseIDTerminalRuleCall_4_0() { return cUseIDTerminalRuleCall_4_0; }
-		
-		//(use+=ID)*
-		public Assignment getUseAssignment_5() { return cUseAssignment_5; }
-		
-		//ID
-		public RuleCall getUseIDTerminalRuleCall_5_0() { return cUseIDTerminalRuleCall_5_0; }
-		
-		//','
-		public Keyword getCommaKeyword_6() { return cCommaKeyword_6; }
-		
-		//'möchte'
-		public Keyword getMöchteKeyword_7() { return cMöchteKeyword_7; }
-		
-		//'ich'
-		public Keyword getIchKeyword_8() { return cIchKeyword_8; }
-		
-		//'als'
-		public Keyword getAlsKeyword_9() { return cAlsKeyword_9; }
-		
-		//role=ID
-		public Assignment getRoleAssignment_10() { return cRoleAssignment_10; }
-		
-		//ID
-		public RuleCall getRoleIDTerminalRuleCall_10_0() { return cRoleIDTerminalRuleCall_10_0; }
-		
-		//goal+=ID
-		public Assignment getGoalAssignment_11() { return cGoalAssignment_11; }
-		
-		//ID
-		public RuleCall getGoalIDTerminalRuleCall_11_0() { return cGoalIDTerminalRuleCall_11_0; }
-		
-		//(goal+=ID)*
-		public Assignment getGoalAssignment_12() { return cGoalAssignment_12; }
-		
-		//ID
-		public RuleCall getGoalIDTerminalRuleCall_12_0() { return cGoalIDTerminalRuleCall_12_0; }
-		
-		//'.'
-		public Keyword getFullStopKeyword_13() { return cFullStopKeyword_13; }
-	}
-	public class SElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.S");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cXeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cXeXPartParserRuleCall_0_0 = (RuleCall)cXeAssignment_0.eContents().get(0);
-		private final Assignment cYeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cYeYPartParserRuleCall_1_0 = (RuleCall)cYeAssignment_1.eContents().get(0);
-		private final Assignment cZeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cZeZPartParserRuleCall_2_0 = (RuleCall)cZeAssignment_2.eContents().get(0);
-		private final Keyword cFullStopKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//S: xe=XPart ye=YPart ze=ZPart '.';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//xe=XPart ye=YPart ze=ZPart '.'
-		public Group getGroup() { return cGroup; }
-		
-		//xe=XPart
-		public Assignment getXeAssignment_0() { return cXeAssignment_0; }
-		
-		//XPart
-		public RuleCall getXeXPartParserRuleCall_0_0() { return cXeXPartParserRuleCall_0_0; }
-		
-		//ye=YPart
-		public Assignment getYeAssignment_1() { return cYeAssignment_1; }
-		
-		//YPart
-		public RuleCall getYeYPartParserRuleCall_1_0() { return cYeYPartParserRuleCall_1_0; }
-		
-		//ze=ZPart
-		public Assignment getZeAssignment_2() { return cZeAssignment_2; }
-		
-		//ZPart
-		public RuleCall getZeZPartParserRuleCall_2_0() { return cZeZPartParserRuleCall_2_0; }
-		
-		//'.'
-		public Keyword getFullStopKeyword_3() { return cFullStopKeyword_3; }
-	}
-	public class XPartElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.XPart");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cTiAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cTiTitleParserRuleCall_0_0 = (RuleCall)cTiAssignment_0.eContents().get(0);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cUmKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		
-		//XPart: ti=Title ':' 'Um';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//ti=Title ':' 'Um'
-		public Group getGroup() { return cGroup; }
-		
-		//ti=Title
-		public Assignment getTiAssignment_0() { return cTiAssignment_0; }
-		
-		//Title
-		public RuleCall getTiTitleParserRuleCall_0_0() { return cTiTitleParserRuleCall_0_0; }
+		//Titel
+		public RuleCall getTitleTitelParserRuleCall_0_0() { return cTitleTitelParserRuleCall_0_0; }
 		
 		//':'
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
 		
 		//'Um'
 		public Keyword getUmKeyword_2() { return cUmKeyword_2; }
-	}
-	public class TitleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.Title");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cTitelAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cTitelIDTerminalRuleCall_0_0 = (RuleCall)cTitelAssignment_0.eContents().get(0);
-		private final Assignment cTitelAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTitelIDTerminalRuleCall_1_0 = (RuleCall)cTitelAssignment_1.eContents().get(0);
 		
-		//Title: Titel+=ID (Titel+=ID)*;
-		@Override public ParserRule getRule() { return rule; }
+		//use=Nutzen
+		public Assignment getUseAssignment_3() { return cUseAssignment_3; }
 		
-		//Titel+=ID (Titel+=ID)*
-		public Group getGroup() { return cGroup; }
-		
-		//Titel+=ID
-		public Assignment getTitelAssignment_0() { return cTitelAssignment_0; }
-		
-		//ID
-		public RuleCall getTitelIDTerminalRuleCall_0_0() { return cTitelIDTerminalRuleCall_0_0; }
-		
-		//(Titel+=ID)*
-		public Assignment getTitelAssignment_1() { return cTitelAssignment_1; }
-		
-		//ID
-		public RuleCall getTitelIDTerminalRuleCall_1_0() { return cTitelIDTerminalRuleCall_1_0; }
-	}
-	public class YPartElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.YPart");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cUsAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cUsUseParserRuleCall_0_0 = (RuleCall)cUsAssignment_0.eContents().get(0);
-		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cMöchteKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cIchKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cAlsKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		
-		//YPart: us=Use ',' 'möchte' 'ich' 'als';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//us=Use ',' 'möchte' 'ich' 'als'
-		public Group getGroup() { return cGroup; }
-		
-		//us=Use
-		public Assignment getUsAssignment_0() { return cUsAssignment_0; }
-		
-		//Use
-		public RuleCall getUsUseParserRuleCall_0_0() { return cUsUseParserRuleCall_0_0; }
+		//Nutzen
+		public RuleCall getUseNutzenParserRuleCall_3_0() { return cUseNutzenParserRuleCall_3_0; }
 		
 		//','
-		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
 		
 		//'möchte'
-		public Keyword getMöchteKeyword_2() { return cMöchteKeyword_2; }
+		public Keyword getMöchteKeyword_5() { return cMöchteKeyword_5; }
 		
 		//'ich'
-		public Keyword getIchKeyword_3() { return cIchKeyword_3; }
+		public Keyword getIchKeyword_6() { return cIchKeyword_6; }
 		
 		//'als'
-		public Keyword getAlsKeyword_4() { return cAlsKeyword_4; }
-	}
-	public class UseElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.Use");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNutzenAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNutzenIDTerminalRuleCall_0_0 = (RuleCall)cNutzenAssignment_0.eContents().get(0);
-		private final Assignment cNutzenAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNutzenIDTerminalRuleCall_1_0 = (RuleCall)cNutzenAssignment_1.eContents().get(0);
+		public Keyword getAlsKeyword_7() { return cAlsKeyword_7; }
 		
-		//Use: Nutzen+=ID (Nutzen+=ID)* ;
+		//role=Rolle
+		public Assignment getRoleAssignment_8() { return cRoleAssignment_8; }
+		
+		//Rolle
+		public RuleCall getRoleRolleParserRuleCall_8_0() { return cRoleRolleParserRuleCall_8_0; }
+		
+		//goal=Ziel
+		public Assignment getGoalAssignment_9() { return cGoalAssignment_9; }
+		
+		//Ziel
+		public RuleCall getGoalZielParserRuleCall_9_0() { return cGoalZielParserRuleCall_9_0; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_10() { return cFullStopKeyword_10; }
+	}
+	public class TitelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.Titel");
+		private final Assignment cTextpartAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cTextpartTextParserRuleCall_0 = (RuleCall)cTextpartAssignment.eContents().get(0);
+		
+		//Titel:
+		//    textpart += Text+
+		////    subst=Substantiv
+		////    infinit += Infinit+
+		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Nutzen+=ID (Nutzen+=ID)*
-		public Group getGroup() { return cGroup; }
+		//textpart += Text+
+		public Assignment getTextpartAssignment() { return cTextpartAssignment; }
 		
-		//Nutzen+=ID
-		public Assignment getNutzenAssignment_0() { return cNutzenAssignment_0; }
-		
-		//ID
-		public RuleCall getNutzenIDTerminalRuleCall_0_0() { return cNutzenIDTerminalRuleCall_0_0; }
-		
-		//(Nutzen+=ID)*
-		public Assignment getNutzenAssignment_1() { return cNutzenAssignment_1; }
-		
-		//ID
-		public RuleCall getNutzenIDTerminalRuleCall_1_0() { return cNutzenIDTerminalRuleCall_1_0; }
+		//Text
+		public RuleCall getTextpartTextParserRuleCall_0() { return cTextpartTextParserRuleCall_0; }
 	}
-	public class ZPartElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.ZPart");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cRolleAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cRolleIDTerminalRuleCall_0_0 = (RuleCall)cRolleAssignment_0.eContents().get(0);
-		private final Assignment cGoAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cGoGoalParserRuleCall_1_0 = (RuleCall)cGoAssignment_1.eContents().get(0);
+	public class TextElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.Text");
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueWORTTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
 		
-		//ZPart: Rolle=ID go=Goal;
+		//Text:
+		//    value = WORT
+		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Rolle=ID go=Goal
-		public Group getGroup() { return cGroup; }
+		//value = WORT
+		public Assignment getValueAssignment() { return cValueAssignment; }
 		
-		//Rolle=ID
-		public Assignment getRolleAssignment_0() { return cRolleAssignment_0; }
-		
-		//ID
-		public RuleCall getRolleIDTerminalRuleCall_0_0() { return cRolleIDTerminalRuleCall_0_0; }
-		
-		//go=Goal
-		public Assignment getGoAssignment_1() { return cGoAssignment_1; }
-		
-		//Goal
-		public RuleCall getGoGoalParserRuleCall_1_0() { return cGoGoalParserRuleCall_1_0; }
+		//WORT
+		public RuleCall getValueWORTTerminalRuleCall_0() { return cValueWORTTerminalRuleCall_0; }
 	}
-	public class GoalElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.Goal");
+	public class NutzenElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.Nutzen");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cZielAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cZielIDTerminalRuleCall_0_0 = (RuleCall)cZielAssignment_0.eContents().get(0);
-		private final Assignment cZielAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cZielIDTerminalRuleCall_1_0 = (RuleCall)cZielAssignment_1.eContents().get(0);
+		private final Assignment cSubstAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cSubstSubstantivParserRuleCall_0_0 = (RuleCall)cSubstAssignment_0.eContents().get(0);
+		private final Assignment cZuBlockAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cZuBlockZuBlockParserRuleCall_1_0 = (RuleCall)cZuBlockAssignment_1.eContents().get(0);
+		private final Assignment cInfinitAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cInfinitInfinitParserRuleCall_2_0 = (RuleCall)cInfinitAssignment_2.eContents().get(0);
 		
-		//Goal: Ziel+=ID (Ziel+=ID)*;
+		//Nutzen:
+		//    subst = Substantiv
+		//    zuBlock=ZuBlock?
+		//    infinit += Infinit+
+		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Ziel+=ID (Ziel+=ID)*
+		//subst = Substantiv
+		//zuBlock=ZuBlock?
+		//infinit += Infinit+
 		public Group getGroup() { return cGroup; }
 		
-		//Ziel+=ID
-		public Assignment getZielAssignment_0() { return cZielAssignment_0; }
+		//subst = Substantiv
+		public Assignment getSubstAssignment_0() { return cSubstAssignment_0; }
 		
-		//ID
-		public RuleCall getZielIDTerminalRuleCall_0_0() { return cZielIDTerminalRuleCall_0_0; }
+		//Substantiv
+		public RuleCall getSubstSubstantivParserRuleCall_0_0() { return cSubstSubstantivParserRuleCall_0_0; }
 		
-		//(Ziel+=ID)*
-		public Assignment getZielAssignment_1() { return cZielAssignment_1; }
+		//zuBlock=ZuBlock?
+		public Assignment getZuBlockAssignment_1() { return cZuBlockAssignment_1; }
 		
-		//ID
-		public RuleCall getZielIDTerminalRuleCall_1_0() { return cZielIDTerminalRuleCall_1_0; }
+		//ZuBlock
+		public RuleCall getZuBlockZuBlockParserRuleCall_1_0() { return cZuBlockZuBlockParserRuleCall_1_0; }
+		
+		//infinit += Infinit+
+		public Assignment getInfinitAssignment_2() { return cInfinitAssignment_2; }
+		
+		//Infinit
+		public RuleCall getInfinitInfinitParserRuleCall_2_0() { return cInfinitInfinitParserRuleCall_2_0; }
+	}
+	public class ZuBlockElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.ZuBlock");
+		private final Keyword cZuKeyword = (Keyword)rule.eContents().get(1);
+		
+		//ZuBlock:
+		//    'zu'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'zu'
+		public Keyword getZuKeyword() { return cZuKeyword; }
+	}
+	public class RolleElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.Rolle");
+		private final Assignment cSubstAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cSubstSubstantivParserRuleCall_0 = (RuleCall)cSubstAssignment.eContents().get(0);
+		
+		//Rolle:
+		//    subst = Substantiv
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//subst = Substantiv
+		public Assignment getSubstAssignment() { return cSubstAssignment; }
+		
+		//Substantiv
+		public RuleCall getSubstSubstantivParserRuleCall_0() { return cSubstSubstantivParserRuleCall_0; }
+	}
+	public class ZielElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.Ziel");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSubstAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cSubstSubstantivParserRuleCall_0_0 = (RuleCall)cSubstAssignment_0.eContents().get(0);
+		private final Assignment cInfinitAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cInfinitInfinitParserRuleCall_1_0 = (RuleCall)cInfinitAssignment_1.eContents().get(0);
+		
+		//Ziel:
+		//    subst = Substantiv
+		//    infinit += Infinit+
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//subst = Substantiv
+		//infinit += Infinit+
+		public Group getGroup() { return cGroup; }
+		
+		//subst = Substantiv
+		public Assignment getSubstAssignment_0() { return cSubstAssignment_0; }
+		
+		//Substantiv
+		public RuleCall getSubstSubstantivParserRuleCall_0_0() { return cSubstSubstantivParserRuleCall_0_0; }
+		
+		//infinit += Infinit+
+		public Assignment getInfinitAssignment_1() { return cInfinitAssignment_1; }
+		
+		//Infinit
+		public RuleCall getInfinitInfinitParserRuleCall_1_0() { return cInfinitInfinitParserRuleCall_1_0; }
+	}
+	public class SubstantivElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.Substantiv");
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueWORTTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
+		
+		//Substantiv:
+		//    value = WORT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//value = WORT
+		public Assignment getValueAssignment() { return cValueAssignment; }
+		
+		//WORT
+		public RuleCall getValueWORTTerminalRuleCall_0() { return cValueWORTTerminalRuleCall_0; }
+	}
+	public class InfinitElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.Infinit");
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueWORTTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
+		
+		//Infinit:
+		//    value = WORT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//value = WORT
+		public Assignment getValueAssignment() { return cValueAssignment; }
+		
+		//WORT
+		public RuleCall getValueWORTTerminalRuleCall_0() { return cValueWORTTerminalRuleCall_0; }
 	}
 	
 	
 	private final ModelElements pModel;
-	private final StoryElements pStory;
-	private final SElements pS;
-	private final XPartElements pXPart;
-	private final TitleElements pTitle;
-	private final YPartElements pYPart;
-	private final UseElements pUse;
-	private final ZPartElements pZPart;
-	private final GoalElements pGoal;
+	private final User_Story_UmElements pUser_Story_Um;
+	private final TitelElements pTitel;
+	private final TextElements pText;
+	private final NutzenElements pNutzen;
+	private final ZuBlockElements pZuBlock;
+	private final RolleElements pRolle;
+	private final ZielElements pZiel;
+	private final SubstantivElements pSubstantiv;
+	private final InfinitElements pInfinit;
+	private final TerminalRule tWORT;
 	
 	private final Grammar grammar;
 	
@@ -369,14 +331,16 @@ public class BelegGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
-		this.pStory = new StoryElements();
-		this.pS = new SElements();
-		this.pXPart = new XPartElements();
-		this.pTitle = new TitleElements();
-		this.pYPart = new YPartElements();
-		this.pUse = new UseElements();
-		this.pZPart = new ZPartElements();
-		this.pGoal = new GoalElements();
+		this.pUser_Story_Um = new User_Story_UmElements();
+		this.pTitel = new TitelElements();
+		this.pText = new TextElements();
+		this.pNutzen = new NutzenElements();
+		this.pZuBlock = new ZuBlockElements();
+		this.pRolle = new RolleElements();
+		this.pZiel = new ZielElements();
+		this.pSubstantiv = new SubstantivElements();
+		this.pInfinit = new InfinitElements();
+		this.tWORT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s86320.s86372.Beleg.WORT");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -407,7 +371,7 @@ public class BelegGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 
 	
 	//Model:
-	//    story+=S*
+	//    story+=User_Story_Um*
 	//;
 	public ModelElements getModelAccess() {
 		return pModel;
@@ -417,84 +381,144 @@ public class BelegGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		return getModelAccess().getRule();
 	}
 	
-	//Story:
-	//    title+=ID (title+=ID)*
-	//    ':' 'Um'
-	//    use+=ID (use+=ID)*
-	//    ','    'möchte' 'ich' 'als'
-	//    role=ID
-	//    goal+=ID (goal+=ID)*
+	////Null testen:
+	////Als Bearbeiter möchte ich Anträge einsehen, um Projekte zu bezuschussen.
+	////
+	////Eins testen:
+	////Als Bearbeiter möchte ich Pdf exportieren, um Dokumente zuückzusenden.
+	////
+	////Zwei testen:
+	////Als Bearbeiter möchte ich Dokumente kommentieren, um Anmerkungen hinzuzufügen.
+	////
+	////Drei testen:
+	////Als Bediener möchte ich Roboter steuern, um Kabel zurechtzuzupfen.
+	////
+	////Vier testen:
+	////Um Projekte zu bezuschussen, möchte ich als Bearbeiter Anträge einsehen.
+	////
+	////Fünf testen:
+	////Um Dokumente zurückzusenden, möchte ich als Bearbeiter Dateien exportieren.
+	////
+	////Sechs testen:
+	////Um Anmerkungen hinzuzufügen, möchte ich als Bearbeiter Dokumente kommentieren.
+	////
+	////Sieben testen:
+	////Um Kabel zurechtzuzupfen, möchte ich als Bediener Roboter steuern.
+	//// <Titel>: Um <Nutzen>, möchte ich als <Rolle> <Ziel/Wunsch>.
+	//User_Story_Um:
+	//    title=Titel ':'
+	//    'Um' use=Nutzen ','
+	//    'möchte' 'ich' 'als'
+	//    role=Rolle
+	//    goal=Ziel
 	//    '.'
 	//;
-	public StoryElements getStoryAccess() {
-		return pStory;
+	public User_Story_UmElements getUser_Story_UmAccess() {
+		return pUser_Story_Um;
 	}
 	
-	public ParserRule getStoryRule() {
-		return getStoryAccess().getRule();
+	public ParserRule getUser_Story_UmRule() {
+		return getUser_Story_UmAccess().getRule();
 	}
 	
-	//S: xe=XPart ye=YPart ze=ZPart '.';
-	public SElements getSAccess() {
-		return pS;
+	//Titel:
+	//    textpart += Text+
+	////    subst=Substantiv
+	////    infinit += Infinit+
+	//;
+	public TitelElements getTitelAccess() {
+		return pTitel;
 	}
 	
-	public ParserRule getSRule() {
-		return getSAccess().getRule();
+	public ParserRule getTitelRule() {
+		return getTitelAccess().getRule();
 	}
 	
-	//XPart: ti=Title ':' 'Um';
-	public XPartElements getXPartAccess() {
-		return pXPart;
+	//Text:
+	//    value = WORT
+	//;
+	public TextElements getTextAccess() {
+		return pText;
 	}
 	
-	public ParserRule getXPartRule() {
-		return getXPartAccess().getRule();
+	public ParserRule getTextRule() {
+		return getTextAccess().getRule();
 	}
 	
-	//Title: Titel+=ID (Titel+=ID)*;
-	public TitleElements getTitleAccess() {
-		return pTitle;
+	//Nutzen:
+	//    subst = Substantiv
+	//    zuBlock=ZuBlock?
+	//    infinit += Infinit+
+	//;
+	public NutzenElements getNutzenAccess() {
+		return pNutzen;
 	}
 	
-	public ParserRule getTitleRule() {
-		return getTitleAccess().getRule();
+	public ParserRule getNutzenRule() {
+		return getNutzenAccess().getRule();
 	}
 	
-	//YPart: us=Use ',' 'möchte' 'ich' 'als';
-	public YPartElements getYPartAccess() {
-		return pYPart;
+	//ZuBlock:
+	//    'zu'
+	//;
+	public ZuBlockElements getZuBlockAccess() {
+		return pZuBlock;
 	}
 	
-	public ParserRule getYPartRule() {
-		return getYPartAccess().getRule();
+	public ParserRule getZuBlockRule() {
+		return getZuBlockAccess().getRule();
 	}
 	
-	//Use: Nutzen+=ID (Nutzen+=ID)* ;
-	public UseElements getUseAccess() {
-		return pUse;
+	//Rolle:
+	//    subst = Substantiv
+	//;
+	public RolleElements getRolleAccess() {
+		return pRolle;
 	}
 	
-	public ParserRule getUseRule() {
-		return getUseAccess().getRule();
+	public ParserRule getRolleRule() {
+		return getRolleAccess().getRule();
 	}
 	
-	//ZPart: Rolle=ID go=Goal;
-	public ZPartElements getZPartAccess() {
-		return pZPart;
+	//Ziel:
+	//    subst = Substantiv
+	//    infinit += Infinit+
+	//;
+	public ZielElements getZielAccess() {
+		return pZiel;
 	}
 	
-	public ParserRule getZPartRule() {
-		return getZPartAccess().getRule();
+	public ParserRule getZielRule() {
+		return getZielAccess().getRule();
 	}
 	
-	//Goal: Ziel+=ID (Ziel+=ID)*;
-	public GoalElements getGoalAccess() {
-		return pGoal;
+	//Substantiv:
+	//    value = WORT
+	//;
+	public SubstantivElements getSubstantivAccess() {
+		return pSubstantiv;
 	}
 	
-	public ParserRule getGoalRule() {
-		return getGoalAccess().getRule();
+	public ParserRule getSubstantivRule() {
+		return getSubstantivAccess().getRule();
+	}
+	
+	//Infinit:
+	//    value = WORT
+	//;
+	public InfinitElements getInfinitAccess() {
+		return pInfinit;
+	}
+	
+	public ParserRule getInfinitRule() {
+		return getInfinitAccess().getRule();
+	}
+	
+	//terminal WORT:
+	//     ('a'..'z' | 'A'..'Z' | 'Ä' | 'Ö' | 'Ü' | 'ä' | 'ö' | 'ü' | 'ß')+
+	//;
+	public TerminalRule getWORTRule() {
+		return tWORT;
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
