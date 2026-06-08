@@ -1,0 +1,116 @@
+grammar de.htwdd.sf.beleg.s86320s86372.Beleg with org.eclipse.xtext.common.Terminals
+
+generate beleg "http://www.htwdd.de/sf/beleg/s86320s86372/Beleg"
+
+Model:
+    story+=User_Story_Um+
+;
+
+//Null testen:
+//Als Bearbeiter möchte ich Anträge einsehen, um Projekte zu bezuschussen.
+//
+//Eins testen:
+//Als Bearbeiter möchte ich Pdf exportieren, um Dokumente zuückzusenden.
+//
+//Zwei testen:
+//Als Bearbeiter möchte ich Dokumente kommentieren, um Anmerkungen hinzuzufügen.
+//
+//Drei testen:
+//Als Bediener möchte ich Roboter steuern, um Kabel zurechtzuzupfen.
+//
+//Vier testen:
+//Um Projekte zu bezuschussen, möchte ich als Bearbeiter Anträge einsehen.
+//
+//Fünf testen:
+//Um Dokumente zurückzusenden, möchte ich als Bearbeiter Dateien exportieren.
+//
+//Sechs testen:
+//Um Anmerkungen hinzuzufügen, möchte ich als Bearbeiter Dokumente kommentieren.
+//
+//Sieben testen:
+//Um Kabel zurechtzuzupfen, möchte ich als Bediener Roboter steuern.
+
+
+// <Titel>: Um <Nutzen>, möchte ich als <Rolle> <Ziel/Wunsch>.
+User_Story_Um:
+    title = Titel 
+    doppelpunkt = DoppelPunktBlock
+    um = UmBlock
+    use = Nutzen
+    komma = KommaBlock
+    moechte = MoechteBlock
+    ich = IchBlock
+    als = AlsBlock
+    role = Rolle
+    goal = Ziel
+    punkt = PunktBlock
+;
+
+
+Titel:
+	textpart += Text+ 
+;
+
+Text:
+	value = WORT
+;
+
+Nutzen:
+	subst = Substantiv
+	zu = ZuBlock?
+	infinit += Infinit+
+;
+
+Rolle:
+	subst = Substantiv
+;
+
+Ziel:
+	subst = Substantiv
+	infinit += Infinit+
+;
+
+DoppelPunktBlock:
+	value = ':'
+;
+
+UmBlock:
+	value = 'Um'
+;
+
+KommaBlock:
+	value = ','
+;
+
+ZuBlock:
+	value ='zu'
+;
+
+MoechteBlock:
+	value ='möchte'
+;
+
+IchBlock:
+	value ='ich'
+;
+
+AlsBlock:
+	value ='als'
+;
+
+PunktBlock:
+	value ='.'
+;
+
+Substantiv:
+	value = WORT
+;
+
+Infinit:
+	value = WORT
+;
+
+
+terminal WORT:
+     ('a'..'z' | 'A'..'Z' | 'Ä' | 'Ö' | 'Ü' | 'ä' | 'ö' | 'ü' | 'ß')+
+;
