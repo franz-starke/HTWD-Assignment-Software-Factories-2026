@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="beleg" nsURI="http://www.htwdd.de/sf/beleg/s86320s86372/Beleg"
+    nsPrefix="beleg">
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="story" upperBound="-1"
+        eType="#//User_Story_Um" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="User_Story_Um">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="title" eType="#//Titel"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="doppelpunkt" eType="#//DoppelPunktBlock"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="um" eType="#//UmBlock"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="use" eType="#//Nutzen"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="komma" eType="#//KommaBlock"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moechte" eType="#//MoechteBlock"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ich" eType="#//IchBlock"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="als" eType="#//AlsBlock"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//Rolle"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goal" eType="#//Ziel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="punkt" eType="#//PunktBlock"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Titel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="textpart" upperBound="-1"
+        eType="#//Text" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Text">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Nutzen">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subst" eType="#//Substantiv"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="zu" eType="#//ZuBlock"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="infinit" upperBound="-1"
+        eType="#//Infinit" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rolle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subst" eType="#//Substantiv"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ziel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subst" eType="#//Substantiv"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="infinit" upperBound="-1"
+        eType="#//Infinit" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DoppelPunktBlock">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UmBlock">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KommaBlock">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ZuBlock">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MoechteBlock">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IchBlock">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AlsBlock">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PunktBlock">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Substantiv">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Infinit">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
